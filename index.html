@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171916">
+  <meta name="description" content="DASTROV STUDIO — video orqali ingliz tilida shadowing mashqlari.">
+  <title>DASTROV STUDIO — English Shadowing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home"><span class="brand-symbol">D</span><span><b>DASTROV</b><small>STUDIO</small></span></a>
+    <div class="side-label">LEARNING SPACE</div>
+    <nav class="nav">
+      <button class="nav-link active" data-page="home"><span>⌂</span> Dashboard</button>
+      <button class="nav-link" data-page="studio"><span>◉</span> Shadowing Studio</button>
+      <button class="nav-link" data-page="library"><span>▤</span> My videos</button>
+      <button class="nav-link" data-page="vocabulary"><span>Aa</span> Vocabulary</button>
+      <button class="nav-link" data-page="progress"><span>↗</span> My progress</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-tip"><span class="tip-star">✦</span><b>Small steps. Big fluency.</b><p>Har kuni 10 daqiqa mashq qiling. Natija vaqt bilan keladi.</p></div>
+      <div class="user-mini"><div class="user-avatar">DS</div><div><b>My workspace</b><small>Personal learning</small></div><span class="more">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Menyuni ochish">☰</button>
+      <div class="crumb">DASTROV STUDIO <span>/</span> <b id="pageCrumb">Dashboard</b></div>
+      <div class="top-right"><span class="online-dot"></span><span>Learning mode</span><div class="top-avatar">DS</div></div>
+    </header>
+
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-text">
+          <div class="eyebrow"><i></i> SPEAK • LISTEN • REPEAT</div>
+          <h1>Find your voice.<br><em>Build your fluency.</em></h1>
+          <p>Sevimli videolaringiz orqali tinglang, takrorlang va ingliz tilida erkinroq gapirishni mashq qiling.</p>
+          <button class="btn-primary" data-goto="studio">Mashqni boshlash <span>↗</span></button>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-circle c1"></div><div class="hero-circle c2"></div>
+          <div class="voice-card"><div class="voice-head"><span></span><span></span><span></span><small>VOICE SESSION</small></div><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="voice-foot">Listen. Repeat. Improve.</div></div>
+          <div class="floating-note">✦ YOUR OWN PACE</div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <article class="stat"><div class="stat-icon orange">◷</div><div><small>Practice time</small><b id="dashMinutes">0 <small>min</small></b></div><label>Jami</label></article>
+        <article class="stat"><div class="stat-icon green">▣</div><div><small>My videos</small><b id="dashVideos">0</b></div><label>Library</label></article>
+        <article class="stat"><div class="stat-icon sand">✦</div><div><small>Total XP</small><b id="dashXP">0</b></div><label>Learning points</label></article>
+        <article class="stat"><div class="stat-icon rose">♨</div><div><small>Day streak</small><b id="dashStreak">0 <small>days</small></b></div><label>Keep going</label></article>
+      </div>
+      <div class="section-title"><div><div class="eyebrow dark">YOUR LEARNING SPACE</div><h2>Bugungi mashg‘ulot</h2><p>O‘zingizga qulay mashqni tanlang.</p></div><span class="tag">PERSONAL PLAN</span></div>
+      <div class="feature-grid">
+        <button class="feature-card feature-dark" data-goto="studio"><span class="feature-icon">▷</span><small>01 / SHADOWING</small><b>Video bilan<br>gapirishni mashq qiling</b><span class="feature-arrow">↗</span></button>
+        <button class="feature-card" data-goto="vocabulary"><span class="feature-icon pale">Aa</span><small>02 / VOCABULARY</small><b>Yangi so‘zlarni<br>yodda saqlang</b><span class="feature-arrow">↗</span></button>
+        <button class="feature-card" data-goto="progress"><span class="feature-icon green">⌁</span><small>03 / PROGRESS</small><b>O‘sishingizni<br>kuzatib boring</b><span class="feature-arrow">↗</span></button>
+      </div>
+      <div class="section-title lower-title"><div><div class="eyebrow dark">QUICK ACCESS</div><h2>Oxirgi videolar</h2></div><button class="text-btn" data-goto="library">Barchasi →</button></div>
+      <div class="recent-grid" id="recentVideos"><div class="empty-small">Hozircha video yo‘q. Shadowing Studio orqali birinchi videoni yuklang.</div></div>
+    </section>
+
+    <section class="page" id="page-studio">
+      <div class="page-heading"><div><div class="eyebrow dark">YOUR PERSONAL PRACTICE ROOM</div><h1>Shadowing <em>Studio</em></h1><p>Videoni yuklang, transkript qo‘shing va har bir gapni takrorlang.</p></div><span class="tag">STUDIO / 01</span></div>
+      <div class="studio-grid">
+        <div class="panel video-panel">
+          <div class="panel-head"><div><b>Video player</b><small id="videoInfo">Video tanlanmagan</small></div><span class="ready"><i></i> READY</span></div>
+          <div class="video-box" id="videoBox">
+            <video id="videoPlayer" playsinline controls hidden></video>
+            <div class="video-empty" id="videoEmpty"><div class="big-play">▷</div><b>Videongiz shu yerda ochiladi</b><small>MP4, MOV, WEBM va brauzer qo‘llaydigan video formatlari</small><label class="btn-primary upload-label" for="videoFile">＋ Videoni tanlash</label></div>
+          </div>
+          <input type="file" id="videoFile" accept="video/*" hidden>
+          <div class="video-toolbar">
+            <div class="video-name"><span class="mini-play">▶</span><div><b id="activeVideoName">Hali video tanlanmagan</b><small id="activeVideoSize">Telefoningizdan video tanlang</small></div></div>
+            <button class="btn-quiet" id="removeActive">Yopish</button>
+          </div>
+          <div class="controls-row">
+            <label>Speed <select id="speedSelect"><option value=".5">0.5×</option><option value=".75">0.75×</option><option value="1" selected>1.0×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2.0×</option></select></label>
+            <label class="check-label"><input type="checkbox" id="loopSentence"> Gapni takrorlash</label>
+            <button class="btn-small" id="repeatSentence">↶ Current sentence</button>
+          </div>
+        </div>
+        <div class="panel upload-side">
+          <div class="upload-symbol">↑</div><div class="eyebrow dark">ADD YOUR CONTENT</div><h3>O‘z videongizni<br>yuklang.</h3>
+          <p>Telefon galereyasi yoki fayllardan video tanlang. Video ushbu qurilmadagi kutubxonangizga saqlanadi.</p>
+          <label class="btn-dark upload-label" for="videoFile">＋ Videoni tanlash</label>
+          <div class="safe-note">◉ Video hozircha faqat shu qurilma va brauzerda saqlanadi.</div>
+          <div class="divider"></div>
+          <div class="eyebrow dark">PRACTICE TOOLS</div>
+          <div class="tool-line"><span>🎙</span><div><b>Voice recording</b><small>Ovozingizni yozib, qayta tinglang</small></div></div>
+          <div class="tool-line"><span>✎</span><div><b>Transcript editor</b><small>Gaplarni o‘zingiz kiritishingiz mumkin</small></div></div>
+        </div>
+      </div>
+
+      <div class="practice-grid">
+        <div class="panel transcript-panel">
+          <div class="panel-head"><div><b>Smart transcript</b><small>Gapni tanlang — video shu joydan boshlanadi</small></div><button class="btn-small" id="addLine">＋ Add sentence</button></div>
+          <div class="transcript-help">Transkriptni hozircha qo‘lda kiritasiz. Har bir qatorda vaqt (sekund) va gap bo‘lishi kerak.</div>
+          <div class="transcript-list" id="transcriptList"><div class="transcript-empty">Hozircha gaplar yo‘q. “Add sentence” tugmasi orqali birinchi gapni kiriting.</div></div>
+          <div class="transcript-actions"><button class="btn-outline" id="exportTranscript">Export transcript</button><button class="btn-dark" id="saveTranscript">Save transcript</button></div>
+        </div>
+        <div class="panel exercise-panel">
+          <div class="panel-head"><div><b>Speaking practice</b><small>Listen, record and compare</small></div><span class="mic-badge">● MIC</span></div>
+          <div class="current-sentence" id="currentSentence">Mashq qilish uchun transkriptdan gap tanlang.</div>
+          <div class="record-controls"><button class="record-btn" id="recordBtn"><span>●</span> Record my voice</button><button class="btn-outline" id="speechBtn">🎙 Speak to text</button></div>
+          <audio id="recordingPlayback" controls hidden></audio>
+          <div class="result-box" id="speechResult">Ovoz yozish yoki brauzer nutqni aniqlash funksiyasidan foydalaning.</div>
+          <div class="eyebrow dark compare-label">TEXT COMPARISON</div>
+          <textarea id="typedAnswer" rows="3" placeholder="Eshitgan gapingizni shu yerga yozing..."></textarea>
+          <button class="btn-dark full" id="checkAnswer">Check my text</button>
+          <div id="compareResult" class="compare-result"></div>
+          <div class="small-disclaimer">Matn taqqoslash mashqi talaffuzning ilmiy bahosi emas. Haqiqiy fonetik baholash uchun AI speech service ulash kerak.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-library">
+      <div class="page-heading"><div><div class="eyebrow dark">YOUR PERSONAL COLLECTION</div><h1>My <em>Videos</em></h1><p>Yuklagan videolaringizni boshqaring va mashqni davom ettiring.</p></div><label class="btn-primary upload-label" for="videoFile">＋ Add video</label></div>
+      <div class="library-tools"><div class="search-wrap">⌕ <input id="videoSearch" placeholder="Videolarni qidirish..."></div><span id="libraryCount">0 videos</span></div>
+      <div class="library-grid" id="libraryGrid"><div class="empty-library"><span>▤</span><b>Kutubxona hozircha bo‘sh</b><small>Birinchi videongizni yuklang.</small></div></div>
+    </section>
+
+    <section class="page" id="page-vocabulary">
+      <div class="page-heading"><div><div class="eyebrow dark">BUILD YOUR WORD BANK</div><h1>My <em>Vocabulary</em></h1><p>Videolardan o‘rgangan so‘zlaringizni saqlang va takrorlang.</p></div><span class="tag" id="wordCount">0 WORDS</span></div>
+      <div class="panel vocab-add"><div><b>Yangi so‘z qo‘shish</b><small>So‘z, tarjima va ixtiyoriy misol kiriting.</small></div><div class="vocab-form"><input id="newWord" placeholder="English word"><input id="newMeaning" placeholder="Tarjimasi"><input id="newExample" placeholder="Example sentence (optional)"><button class="btn-dark" id="addWord">＋ Save word</button></div></div>
+      <div class="vocab-toolbar"><b>Saved words</b><button class="btn-small" id="flashcardBtn">✦ Flashcard practice</button></div>
+      <div class="vocab-grid" id="vocabGrid"><div class="empty-library"><span>Aa</span><b>Hozircha so‘zlar yo‘q</b><small>Yuqoridagi maydon orqali so‘z qo‘shing.</small></div></div>
+      <div class="flashcard-area" id="flashcardArea" hidden><div class="flashcard" id="flashcard"><small>FLASHCARD</small><b id="flashWord">Word</b><p id="flashMeaning">Tarjima</p><button class="btn-outline" id="flipCard">Show meaning</button></div><div class="flash-actions"><button class="btn-outline" id="prevCard">← Previous</button><button class="btn-dark" id="nextCard">Next →</button></div></div>
+    </section>
+
+    <section class="page" id="page-progress">
+      <div class="page-heading"><div><div class="eyebrow dark">YOUR LEARNING JOURNEY</div><h1>My <em>Progress</em></h1><p>Amaliyotingiz va o‘sishingiz haqida umumiy ma’lumot.</p></div><span class="tag">KEEP MOVING</span></div>
+      <div class="progress-stats">
+        <div class="progress-card"><small>Total XP</small><b id="progressXP">0</b><span>✦ Learning points</span></div>
+        <div class="progress-card"><small>Practice minutes</small><b id="progressMinutes">0</b><span>◷ Total time</span></div>
+        <div class="progress-card"><small>Completed sessions</small><b id="progressSessions">0</b><span>✓ Practice sessions</span></div>
+        <div class="progress-card"><small>Current streak</small><b id="progressStreak">0</b><span>♨ Days in a row</span></div>
+      </div>
+      <div class="panel progress-panel"><div class="panel-head"><div><b>Learning habits</b><small>Kunlik faollik</small></div></div><div class="week-chart" id="weekChart"></div><div class="chart-legend"><span><i></i> Practice activity</span><small>Faollik video ko‘rish vaqtiga qarab hisoblanadi.</small></div></div>
+      <div class="panel achievement-panel"><div class="panel-head"><div><b>Achievements</b><small>Kichik yutuqlar ham muhim</small></div></div><div class="achievement-list" id="achievementList"></div></div>
+    </section>
+
+    <footer class="footer"><span>© 2026 DASTROV STUDIO</span><span>Build your voice, one sentence at a time.</span></footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
